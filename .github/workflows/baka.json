@@ -1,109 +1,504 @@
 {
-    "SchemaVersion": 2,
-    "ArtifactName": "docker.io/my-organization/my-app:fe99d65262e0a86aecee67732c8226a4a071e248",
-    "ArtifactType": "container_image",
-    "Metadata": {
-      "OS": {
-        "Family": "ubuntu",
-        "Name": "22.04"
-      },
-      "ImageID": "sha256:c729e6577e279eebc9ab73c7129d9846da7521203a421fa786779cb12ae7aa64",
-      "DiffIDs": [
-        "sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466",
-        "sha256:2e3f404e855dfe3c4b62677e65e71995e0f4e1f3d13c9dc0aff1caa7103938cf",
-        "sha256:06da175696072203545ed4f1396114c3d0527ac6c23b121eb488ec80532d783b"
-      ],
-      "RepoTags": [
-        "my-organization/my-app:fe99d65262e0a86aecee67732c8226a4a071e248"
-      ],
-      "ImageConfig": {
-        "architecture": "amd64",
-        "container": "6c6381a9416ae8408842b1388dd6b5ec4f35482753ba2eb596e89be13dce8943",
-        "created": "2023-04-01T08:52:58.243797682Z",
-        "docker_version": "20.10.23+azure-2",
-        "history": [
-          {
-            "created": "2023-03-08T04:44:25.225589475Z",
-            "created_by": "/bin/sh -c #(nop)  ARG RELEASE",
-            "empty_layer": true
-          },
-          {
-            "created": "2023-03-08T04:44:25.380763616Z",
-            "created_by": "/bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH",
-            "empty_layer": true
-          },
-          {
-            "created": "2023-03-08T04:44:25.43565156Z",
-            "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.ref.name=ubuntu",
-            "empty_layer": true
-          },
-          {
-            "created": "2023-03-08T04:44:25.487233076Z",
-            "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.version=22.04",
-            "empty_layer": true
-          },
-          {
-            "created": "2023-03-08T04:44:27.440479984Z",
-            "created_by": "/bin/sh -c #(nop) ADD file:c8ef6447752cab2541ffca9e3cfa27d581f3491bc8f356f6eafd951243609341 in / "
-          },
-          {
-            "created": "2023-03-08T04:44:27.714921351Z",
-            "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/bash\"]",
-            "empty_layer": true
-          },
-          {
-            "created": "2023-04-01T08:52:55.587423217Z",
-            "created_by": "/bin/sh -c #(nop) WORKDIR /app"
-          },
-          {
-            "created": "2023-04-01T08:52:57.00049288Z",
-            "created_by": "/bin/sh -c #(nop) COPY dir:2c7a846c17f6a2e0f61d1d9231bab30f88ef9dfcbea77989c32e30053a9b341f in . "
-          },
-          {
-            "created": "2023-04-01T08:52:57.238010204Z",
-            "created_by": "/bin/sh -c #(nop)  CMD [\"echo\" \"`fuck`\"]",
-            "empty_layer": true
-          },
-          {
-            "created": "2023-04-01T08:52:58.243797682Z",
-            "created_by": "/bin/sh -c #(nop)  EXPOSE 3000",
-            "empty_layer": true
-          }
-        ],
-        "os": "linux",
-        "rootfs": {
-          "type": "layers",
-          "diff_ids": [
-            "sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466",
-            "sha256:2e3f404e855dfe3c4b62677e65e71995e0f4e1f3d13c9dc0aff1caa7103938cf",
-            "sha256:06da175696072203545ed4f1396114c3d0527ac6c23b121eb488ec80532d783b"
-          ]
+  "SchemaVersion": 2,
+  "ArtifactName": "docker.io/my-organization/my-app:5c50986003f17a178c9a06f19525a01edc9d0972",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "debian",
+      "Name": "10.13"
+    },
+    "ImageID": "sha256:e958adf72938c32a1e86a273519a28eb98adcd2a8b6ecb71c4b3529d49bde0f5",
+    "DiffIDs": [
+      "sha256:f50705e98bf5b0695bfbee8c29c248bef67ec3eff8b21a0616cf2b57dc2c2d12",
+      "sha256:be70b6dc0e0eae3a1087925b2383650536e7f80c903d5a28a38688dafe2530d7",
+      "sha256:41523268899a098d71cb2fd7d73e617453b6b71c3e526436363b28b6a282483c",
+      "sha256:847345bfcef4f562544c2730b07a9f7261838631d3e5ebd0685d13445212baca",
+      "sha256:c58e75992d5121357c4590545bee094bff2635f5722b7c955be2f20049c52141",
+      "sha256:cbc8f3f1dc11d96015a6f4e5787164890ac475afb06733978c858cf4b92cab45",
+      "sha256:928cd3b0404b0de3865c694e903508abb5271bda57be561cf79a0fa6ed88479e",
+      "sha256:51035f2c006475aae361af34ebcf1a13db858be69797d1f034ce197b6c43543f",
+      "sha256:a3da022a2808a667379609c03b2c4223af995bad9edf891b0e772d42a487c2f9",
+      "sha256:6a29f1e3273e7a61e8516835b313128beeaf0de0da0748e9c3cf591a344803a7",
+      "sha256:fa9d72f904bc748ec57bee7a9cf32b595b4252fca54d54e7fdcf407518ced222",
+      "sha256:83006cc77d7084ae751f220c6929a8e01204ce3dc714b9d2849cca81348ddb57"
+    ],
+    "RepoTags": [
+      "my-organization/my-app:5c50986003f17a178c9a06f19525a01edc9d0972"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "container": "2784f3699df83e439c3bb6b632835210d86b57a660f9425b8fd65bbd72cfa0ca",
+      "created": "2023-04-01T11:04:31.845192855Z",
+      "docker_version": "20.10.23+azure-2",
+      "history": [
+        {
+          "created": "2023-03-23T01:30:38.335886954Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:f5e6e6cbfbb36f50f49f06fbac953a130383acb67a1c5e9979441f1915b1077d in / "
         },
-        "config": {
-          "Cmd": [
-            "echo",
-            "`fuck`"
-          ],
-          "Env": [
-            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-          ],
-          "Image": "sha256:c20870a0eb6f2c07c0d38f8051270a9a06cac96c6591ff06a48f56a0f6920d01",
-          "Labels": {
-            "org.opencontainers.image.ref.name": "ubuntu",
-            "org.opencontainers.image.version": "22.04"
-          },
-          "WorkingDir": "/app",
-          "ExposedPorts": {
-            "3000/tcp": {}
-          }
+        {
+          "created": "2023-03-23T01:30:38.775046804Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"bash\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-03-23T06:02:57.890384361Z",
+          "created_by": "/bin/sh -c set -eux; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tca-certificates \t\tcurl \t\tnetbase \t\twget \t; \trm -rf /var/lib/apt/lists/*"
+        },
+        {
+          "created": "2023-03-23T06:03:03.601530226Z",
+          "created_by": "/bin/sh -c set -ex; \tif ! command -v gpg \u003e /dev/null; then \t\tapt-get update; \t\tapt-get install -y --no-install-recommends \t\t\tgnupg \t\t\tdirmngr \t\t; \t\trm -rf /var/lib/apt/lists/*; \tfi"
+        },
+        {
+          "created": "2023-03-23T06:03:24.328200858Z",
+          "created_by": "/bin/sh -c apt-get update \u0026\u0026 apt-get install -y --no-install-recommends \t\tgit \t\tmercurial \t\topenssh-client \t\tsubversion \t\t\t\tprocps \t\u0026\u0026 rm -rf /var/lib/apt/lists/*"
+        },
+        {
+          "created": "2023-03-23T06:04:38.829957715Z",
+          "created_by": "/bin/sh -c set -ex; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tautoconf \t\tautomake \t\tbzip2 \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\timagemagick \t\tlibbz2-dev \t\tlibc6-dev \t\tlibcurl4-openssl-dev \t\tlibdb-dev \t\tlibevent-dev \t\tlibffi-dev \t\tlibgdbm-dev \t\tlibglib2.0-dev \t\tlibgmp-dev \t\tlibjpeg-dev \t\tlibkrb5-dev \t\tliblzma-dev \t\tlibmagickcore-dev \t\tlibmagickwand-dev \t\tlibmaxminddb-dev \t\tlibncurses5-dev \t\tlibncursesw5-dev \t\tlibpng-dev \t\tlibpq-dev \t\tlibreadline-dev \t\tlibsqlite3-dev \t\tlibssl-dev \t\tlibtool \t\tlibwebp-dev \t\tlibxml2-dev \t\tlibxslt-dev \t\tlibyaml-dev \t\tmake \t\tpatch \t\tunzip \t\txz-utils \t\tzlib1g-dev \t\t\t\t$( \t\t\tif apt-cache show 'default-libmysqlclient-dev' 2\u003e/dev/null | grep -q '^Version:'; then \t\t\t\techo 'default-libmysqlclient-dev'; \t\t\telse \t\t\t\techo 'libmysqlclient-dev'; \t\t\tfi \t\t) \t; \trm -rf /var/lib/apt/lists/*"
+        },
+        {
+          "created": "2023-03-23T15:41:13.827041588Z",
+          "created_by": "/bin/sh -c groupadd --gid 1000 node   \u0026\u0026 useradd --uid 1000 --gid node --shell /bin/bash --create-home node"
+        },
+        {
+          "created": "2023-03-23T15:47:33.848034265Z",
+          "created_by": "/bin/sh -c #(nop)  ENV NODE_VERSION=14.21.3",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-03-23T15:47:46.469684291Z",
+          "created_by": "/bin/sh -c ARCH= \u0026\u0026 dpkgArch=\"$(dpkg --print-architecture)\"   \u0026\u0026 case \"${dpkgArch##*-}\" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo \"unsupported architecture\"; exit 1 ;;   esac   \u0026\u0026 set -ex   \u0026\u0026 for key in     4ED778F539E3634C779C87C6D7062848A1AB005C     141F07595B7B3FFE74309A937405533BE57C7D57     74F12602B6F1C4E913FAA37AD3A89613643B6201     61FC681DFB92A079F1685E77973F295594EC4689     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C     108F52B48DB57BB0CC439B2997B01419BD92F80A   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$key\" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys \"$key\" ;   done   \u0026\u0026 curl -fsSLO --compressed \"https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz\"   \u0026\u0026 curl -fsSLO --compressed \"https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc\"   \u0026\u0026 gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   \u0026\u0026 grep \" node-v$NODE_VERSION-linux-$ARCH.tar.xz\\$\" SHASUMS256.txt | sha256sum -c -   \u0026\u0026 tar -xJf \"node-v$NODE_VERSION-linux-$ARCH.tar.xz\" -C /usr/local --strip-components=1 --no-same-owner   \u0026\u0026 rm \"node-v$NODE_VERSION-linux-$ARCH.tar.xz\" SHASUMS256.txt.asc SHASUMS256.txt   \u0026\u0026 ln -s /usr/local/bin/node /usr/local/bin/nodejs   \u0026\u0026 node --version   \u0026\u0026 npm --version"
+        },
+        {
+          "created": "2023-03-23T15:47:46.874951841Z",
+          "created_by": "/bin/sh -c #(nop)  ENV YARN_VERSION=1.22.19",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-03-23T15:47:49.591250675Z",
+          "created_by": "/bin/sh -c set -ex   \u0026\u0026 for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$key\" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys \"$key\" ;   done   \u0026\u0026 curl -fsSLO --compressed \"https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz\"   \u0026\u0026 curl -fsSLO --compressed \"https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc\"   \u0026\u0026 gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   \u0026\u0026 mkdir -p /opt   \u0026\u0026 tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   \u0026\u0026 ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   \u0026\u0026 ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   \u0026\u0026 rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   \u0026\u0026 yarn --version"
+        },
+        {
+          "created": "2023-03-23T15:47:49.694855857Z",
+          "created_by": "/bin/sh -c #(nop) COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ "
+        },
+        {
+          "created": "2023-03-23T15:47:49.774914129Z",
+          "created_by": "/bin/sh -c #(nop)  ENTRYPOINT [\"docker-entrypoint.sh\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-03-23T15:47:49.860697034Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"node\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-04-01T11:04:22.536906804Z",
+          "created_by": "/bin/sh -c #(nop) WORKDIR /app"
+        },
+        {
+          "created": "2023-04-01T11:04:23.700498518Z",
+          "created_by": "/bin/sh -c #(nop) COPY dir:e783bf9d5332748d0a58758158a41727de1f0f29c33ed6d1569f3fea0dbd6c8b in . "
+        },
+        {
+          "created": "2023-04-01T11:04:29.60800495Z",
+          "created_by": "/bin/sh -c yarn install --production"
+        },
+        {
+          "created": "2023-04-01T11:04:30.727172616Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"node\" \"src/index.js\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-04-01T11:04:31.845192855Z",
+          "created_by": "/bin/sh -c #(nop)  EXPOSE 3000",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:f50705e98bf5b0695bfbee8c29c248bef67ec3eff8b21a0616cf2b57dc2c2d12",
+          "sha256:be70b6dc0e0eae3a1087925b2383650536e7f80c903d5a28a38688dafe2530d7",
+          "sha256:41523268899a098d71cb2fd7d73e617453b6b71c3e526436363b28b6a282483c",
+          "sha256:847345bfcef4f562544c2730b07a9f7261838631d3e5ebd0685d13445212baca",
+          "sha256:c58e75992d5121357c4590545bee094bff2635f5722b7c955be2f20049c52141",
+          "sha256:cbc8f3f1dc11d96015a6f4e5787164890ac475afb06733978c858cf4b92cab45",
+          "sha256:928cd3b0404b0de3865c694e903508abb5271bda57be561cf79a0fa6ed88479e",
+          "sha256:51035f2c006475aae361af34ebcf1a13db858be69797d1f034ce197b6c43543f",
+          "sha256:a3da022a2808a667379609c03b2c4223af995bad9edf891b0e772d42a487c2f9",
+          "sha256:6a29f1e3273e7a61e8516835b313128beeaf0de0da0748e9c3cf591a344803a7",
+          "sha256:fa9d72f904bc748ec57bee7a9cf32b595b4252fca54d54e7fdcf407518ced222",
+          "sha256:83006cc77d7084ae751f220c6929a8e01204ce3dc714b9d2849cca81348ddb57"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "node",
+          "src/index.js"
+        ],
+        "Entrypoint": [
+          "docker-entrypoint.sh"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "NODE_VERSION=14.21.3",
+          "YARN_VERSION=1.22.19"
+        ],
+        "Image": "sha256:df96464c616e5ec095e23bffe99fd7a5b9ece3a7007255eb040aa53cbccb7e07",
+        "WorkingDir": "/app",
+        "ExposedPorts": {
+          "3000/tcp": {}
         }
       }
+    }
+  },
+  "Results": [
+    {
+      "Target": "docker.io/my-organization/my-app:5c50986003f17a178c9a06f19525a01edc9d0972 (debian 10.13)",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2023-26604",
+          "VendorIDs": [
+            "DLA-3377-1"
+          ],
+          "PkgID": "libsystemd0@241-7~deb10u8",
+          "PkgName": "libsystemd0",
+          "InstalledVersion": "241-7~deb10u8",
+          "FixedVersion": "241-7~deb10u9",
+          "Layer": {
+            "DiffID": "sha256:f50705e98bf5b0695bfbee8c29c248bef67ec3eff8b21a0616cf2b57dc2c2d12"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-26604",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "systemd: privilege escalation via the less pager",
+          "Description": "systemd before 247 does not adequately block local privilege escalation for some Sudo configurations, e.g., plausible sudoers files in which the \"systemctl status\" command may be executed. Specifically, systemd does not set LESSSECURE to 1, and thus other programs may be launched from the less program. This presents a substantial security risk when running systemctl from Sudo, because less executes as root when the terminal size is too small to show the complete systemctl output.",
+          "Severity": "HIGH",
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 7.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 7.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-26604",
+            "https://blog.compass-security.com/2012/10/dangerous-sudoers-entries-part-2-insecure-functionality/",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26604",
+            "https://github.com/systemd/systemd/blob/main/NEWS#L4335-L4340",
+            "https://github.com/systemd/systemd/issues/5666",
+            "https://lists.debian.org/debian-lts-announce/2023/03/msg00032.html",
+            "https://medium.com/@zenmoviefornotification/saidov-maxim-cve-2023-26604-c1232a526ba7"
+          ],
+          "PublishedDate": "2023-03-03T16:15:00Z",
+          "LastModifiedDate": "2023-03-31T23:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-26604",
+          "VendorIDs": [
+            "DLA-3377-1"
+          ],
+          "PkgID": "libudev1@241-7~deb10u8",
+          "PkgName": "libudev1",
+          "InstalledVersion": "241-7~deb10u8",
+          "FixedVersion": "241-7~deb10u9",
+          "Layer": {
+            "DiffID": "sha256:f50705e98bf5b0695bfbee8c29c248bef67ec3eff8b21a0616cf2b57dc2c2d12"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-26604",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "systemd: privilege escalation via the less pager",
+          "Description": "systemd before 247 does not adequately block local privilege escalation for some Sudo configurations, e.g., plausible sudoers files in which the \"systemctl status\" command may be executed. Specifically, systemd does not set LESSSECURE to 1, and thus other programs may be launched from the less program. This presents a substantial security risk when running systemctl from Sudo, because less executes as root when the terminal size is too small to show the complete systemctl output.",
+          "Severity": "HIGH",
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 7.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 7.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-26604",
+            "https://blog.compass-security.com/2012/10/dangerous-sudoers-entries-part-2-insecure-functionality/",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26604",
+            "https://github.com/systemd/systemd/blob/main/NEWS#L4335-L4340",
+            "https://github.com/systemd/systemd/issues/5666",
+            "https://lists.debian.org/debian-lts-announce/2023/03/msg00032.html",
+            "https://medium.com/@zenmoviefornotification/saidov-maxim-cve-2023-26604-c1232a526ba7"
+          ],
+          "PublishedDate": "2023-03-03T16:15:00Z",
+          "LastModifiedDate": "2023-03-31T23:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-3204",
+          "VendorIDs": [
+            "DLA-3371-1"
+          ],
+          "PkgID": "libunbound8@1.9.0-2+deb10u2",
+          "PkgName": "libunbound8",
+          "InstalledVersion": "1.9.0-2+deb10u2",
+          "FixedVersion": "1.9.0-2+deb10u3",
+          "Layer": {
+            "DiffID": "sha256:c58e75992d5121357c4590545bee094bff2635f5722b7c955be2f20049c52141"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-3204",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "unbound: NRDelegation attack leads to uncontrolled resource consumption (Non-Responsive Delegation Attack)",
+          "Description": "A vulnerability named 'Non-Responsive Delegation Attack' (NRDelegation Attack) has been discovered in various DNS resolving software. The NRDelegation Attack works by having a malicious delegation with a considerable number of non responsive nameservers. The attack starts by querying a resolver for a record that relies on those unresponsive nameservers. The attack can cause a resolver to spend a lot of time/resources resolving records under a malicious delegation point where a considerable number of unresponsive NS records reside. It can trigger high CPU usage in some resolver implementations that continually look in the cache for resolved NS records in that delegation. This can lead to degraded performance and eventually denial of service in orchestrated attacks. Unbound does not suffer from high CPU usage, but resources are still needed for resolving the malicious delegation. Unbound will keep trying to resolve the record until hard limits are reached. Based on the nature of the attack and the replies, different limits could be reached. From version 1.16.3 on, Unbound introduces fixes for better performance when under load, by cutting opportunistic queries for nameserver discovery and DNSKEY prefetching and limiting the number of times a delegation point can issue a cache lookup for missing records.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-3204",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3204",
+            "https://lists.debian.org/debian-lts-announce/2023/03/msg00024.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/35QGS5FBQTG3DBSK7QV67PA64P24ABHY/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3G2HS6CYPSIGAKO6QLEZPG3RD6AMPB7B/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4S4EU6DMJXQFMAIE6SLAH4H5RNRU6VQL/",
+            "https://nlnetlabs.nl/downloads/unbound/CVE-2022-3204.txt",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-3204",
+            "https://security.gentoo.org/glsa/202212-02",
+            "https://ubuntu.com/security/notices/USN-5732-1",
+            "https://www.nlnetlabs.nl/downloads/unbound/CVE-2022-3204.txt"
+          ],
+          "PublishedDate": "2022-09-26T14:15:00Z",
+          "LastModifiedDate": "2023-03-29T15:15:00Z"
+        }
+      ]
     },
-    "Results": [
-      {
-        "Target": "docker.io/my-organization/my-app:fe99d65262e0a86aecee67732c8226a4a071e248 (ubuntu 22.04)",
-        "Class": "os-pkgs",
-        "Type": "ubuntu"
-      }
-    ]
-  }
+    {
+      "Target": "Node.js",
+      "Class": "lang-pkgs",
+      "Type": "node-pkg",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2021-3807",
+          "PkgID": "ansi-regex@3.0.0",
+          "PkgName": "ansi-regex",
+          "PkgPath": "usr/local/lib/node_modules/npm/node_modules/string-width/node_modules/ansi-regex/package.json",
+          "InstalledVersion": "3.0.0",
+          "FixedVersion": "3.0.1, 4.1.1, 5.0.1, 6.0.1",
+          "Layer": {
+            "DiffID": "sha256:928cd3b0404b0de3865c694e903508abb5271bda57be561cf79a0fa6ed88479e"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3807",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-ansi-regex: Regular expression denial of service (ReDoS) matching ANSI escape codes",
+          "Description": "ansi-regex is vulnerable to Inefficient Regular Expression Complexity",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-697"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 7.8,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2022:6595",
+            "https://access.redhat.com/security/cve/CVE-2021-3807",
+            "https://app.snyk.io/vuln/SNYK-JS-ANSIREGEX-1583908",
+            "https://bugzilla.redhat.com/1907444",
+            "https://bugzilla.redhat.com/1945459",
+            "https://bugzilla.redhat.com/1964461",
+            "https://bugzilla.redhat.com/2007557",
+            "https://bugzilla.redhat.com/2098556",
+            "https://bugzilla.redhat.com/2102001",
+            "https://bugzilla.redhat.com/2105422",
+            "https://bugzilla.redhat.com/2105426",
+            "https://bugzilla.redhat.com/2105428",
+            "https://bugzilla.redhat.com/2105430",
+            "https://errata.almalinux.org/9/ALSA-2022-6595.html",
+            "https://github.com/advisories/GHSA-93q8-gq69-wqmw",
+            "https://github.com/chalk/ansi-regex/commit/419250fa510bf31b4cc672e76537a64f9332e1f1",
+            "https://github.com/chalk/ansi-regex/commit/75a657da7af875b2e2724fd6331bf0a4b23d3c9a",
+            "https://github.com/chalk/ansi-regex/commit/8d1d7cdb586269882c4bdc1b7325d0c58c8f76f9",
+            "https://github.com/chalk/ansi-regex/commit/c3c0b3f2736b9c01feec0fef33980c43720dcde8",
+            "https://github.com/chalk/ansi-regex/issues/38#issuecomment-924086311",
+            "https://github.com/chalk/ansi-regex/issues/38#issuecomment-925924774",
+            "https://github.com/chalk/ansi-regex/releases/tag/v6.0.1",
+            "https://huntr.dev/bounties/5b3cf33b-ede0-4398-9974-800876dfd994",
+            "https://linux.oracle.com/cve/CVE-2021-3807.html",
+            "https://linux.oracle.com/errata/ELSA-2022-6595.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-3807",
+            "https://security.netapp.com/advisory/ntap-20221014-0002/",
+            "https://www.oracle.com/security-alerts/cpuapr2022.html"
+          ],
+          "PublishedDate": "2021-09-17T07:15:00Z",
+          "LastModifiedDate": "2022-11-07T18:43:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3807",
+          "PkgID": "ansi-regex@4.1.0",
+          "PkgName": "ansi-regex",
+          "PkgPath": "usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/ansi-regex/package.json",
+          "InstalledVersion": "4.1.0",
+          "FixedVersion": "3.0.1, 4.1.1, 5.0.1, 6.0.1",
+          "Layer": {
+            "DiffID": "sha256:928cd3b0404b0de3865c694e903508abb5271bda57be561cf79a0fa6ed88479e"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3807",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-ansi-regex: Regular expression denial of service (ReDoS) matching ANSI escape codes",
+          "Description": "ansi-regex is vulnerable to Inefficient Regular Expression Complexity",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-697"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 7.8,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2022:6595",
+            "https://access.redhat.com/security/cve/CVE-2021-3807",
+            "https://app.snyk.io/vuln/SNYK-JS-ANSIREGEX-1583908",
+            "https://bugzilla.redhat.com/1907444",
+            "https://bugzilla.redhat.com/1945459",
+            "https://bugzilla.redhat.com/1964461",
+            "https://bugzilla.redhat.com/2007557",
+            "https://bugzilla.redhat.com/2098556",
+            "https://bugzilla.redhat.com/2102001",
+            "https://bugzilla.redhat.com/2105422",
+            "https://bugzilla.redhat.com/2105426",
+            "https://bugzilla.redhat.com/2105428",
+            "https://bugzilla.redhat.com/2105430",
+            "https://errata.almalinux.org/9/ALSA-2022-6595.html",
+            "https://github.com/advisories/GHSA-93q8-gq69-wqmw",
+            "https://github.com/chalk/ansi-regex/commit/419250fa510bf31b4cc672e76537a64f9332e1f1",
+            "https://github.com/chalk/ansi-regex/commit/75a657da7af875b2e2724fd6331bf0a4b23d3c9a",
+            "https://github.com/chalk/ansi-regex/commit/8d1d7cdb586269882c4bdc1b7325d0c58c8f76f9",
+            "https://github.com/chalk/ansi-regex/commit/c3c0b3f2736b9c01feec0fef33980c43720dcde8",
+            "https://github.com/chalk/ansi-regex/issues/38#issuecomment-924086311",
+            "https://github.com/chalk/ansi-regex/issues/38#issuecomment-925924774",
+            "https://github.com/chalk/ansi-regex/releases/tag/v6.0.1",
+            "https://huntr.dev/bounties/5b3cf33b-ede0-4398-9974-800876dfd994",
+            "https://linux.oracle.com/cve/CVE-2021-3807.html",
+            "https://linux.oracle.com/errata/ELSA-2022-6595.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-3807",
+            "https://security.netapp.com/advisory/ntap-20221014-0002/",
+            "https://www.oracle.com/security-alerts/cpuapr2022.html"
+          ],
+          "PublishedDate": "2021-09-17T07:15:00Z",
+          "LastModifiedDate": "2022-11-07T18:43:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-25881",
+          "PkgID": "http-cache-semantics@3.8.1",
+          "PkgName": "http-cache-semantics",
+          "PkgPath": "usr/local/lib/node_modules/npm/node_modules/http-cache-semantics/package.json",
+          "InstalledVersion": "3.8.1",
+          "FixedVersion": "4.1.1",
+          "Layer": {
+            "DiffID": "sha256:928cd3b0404b0de3865c694e903508abb5271bda57be561cf79a0fa6ed88479e"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-25881",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "http-cache-semantics: Regular Expression Denial of Service (ReDoS) vulnerability",
+          "Description": "This affects versions of the package http-cache-semantics before 4.1.1. The issue can be exploited via malicious request header values sent to a server, when that server reads the cache policy from the request using this library.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-1333"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-25881",
+            "https://github.com/advisories/GHSA-rc47-6667-2j5j",
+            "https://github.com/kornelski/http-cache-semantics/blob/master/index.js%23L83",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-25881",
+            "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-3253332",
+            "https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-3248783"
+          ],
+          "PublishedDate": "2023-01-31T05:15:00Z",
+          "LastModifiedDate": "2023-02-07T17:07:00Z"
+        }
+      ]
+    }
+  ]
+}
