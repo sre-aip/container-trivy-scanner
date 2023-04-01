@@ -1,121 +1,109 @@
 {
     "SchemaVersion": 2,
-    "ArtifactName": ".",
-    "ArtifactType": "filesystem",
+    "ArtifactName": "docker.io/my-organization/my-app:fe99d65262e0a86aecee67732c8226a4a071e248",
+    "ArtifactType": "container_image",
     "Metadata": {
+      "OS": {
+        "Family": "ubuntu",
+        "Name": "22.04"
+      },
+      "ImageID": "sha256:c729e6577e279eebc9ab73c7129d9846da7521203a421fa786779cb12ae7aa64",
+      "DiffIDs": [
+        "sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466",
+        "sha256:2e3f404e855dfe3c4b62677e65e71995e0f4e1f3d13c9dc0aff1caa7103938cf",
+        "sha256:06da175696072203545ed4f1396114c3d0527ac6c23b121eb488ec80532d783b"
+      ],
+      "RepoTags": [
+        "my-organization/my-app:fe99d65262e0a86aecee67732c8226a4a071e248"
+      ],
       "ImageConfig": {
-        "architecture": "",
-        "created": "0001-01-01T00:00:00Z",
-        "os": "",
+        "architecture": "amd64",
+        "container": "6c6381a9416ae8408842b1388dd6b5ec4f35482753ba2eb596e89be13dce8943",
+        "created": "2023-04-01T08:52:58.243797682Z",
+        "docker_version": "20.10.23+azure-2",
+        "history": [
+          {
+            "created": "2023-03-08T04:44:25.225589475Z",
+            "created_by": "/bin/sh -c #(nop)  ARG RELEASE",
+            "empty_layer": true
+          },
+          {
+            "created": "2023-03-08T04:44:25.380763616Z",
+            "created_by": "/bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH",
+            "empty_layer": true
+          },
+          {
+            "created": "2023-03-08T04:44:25.43565156Z",
+            "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.ref.name=ubuntu",
+            "empty_layer": true
+          },
+          {
+            "created": "2023-03-08T04:44:25.487233076Z",
+            "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.version=22.04",
+            "empty_layer": true
+          },
+          {
+            "created": "2023-03-08T04:44:27.440479984Z",
+            "created_by": "/bin/sh -c #(nop) ADD file:c8ef6447752cab2541ffca9e3cfa27d581f3491bc8f356f6eafd951243609341 in / "
+          },
+          {
+            "created": "2023-03-08T04:44:27.714921351Z",
+            "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/bash\"]",
+            "empty_layer": true
+          },
+          {
+            "created": "2023-04-01T08:52:55.587423217Z",
+            "created_by": "/bin/sh -c #(nop) WORKDIR /app"
+          },
+          {
+            "created": "2023-04-01T08:52:57.00049288Z",
+            "created_by": "/bin/sh -c #(nop) COPY dir:2c7a846c17f6a2e0f61d1d9231bab30f88ef9dfcbea77989c32e30053a9b341f in . "
+          },
+          {
+            "created": "2023-04-01T08:52:57.238010204Z",
+            "created_by": "/bin/sh -c #(nop)  CMD [\"echo\" \"`fuck`\"]",
+            "empty_layer": true
+          },
+          {
+            "created": "2023-04-01T08:52:58.243797682Z",
+            "created_by": "/bin/sh -c #(nop)  EXPOSE 3000",
+            "empty_layer": true
+          }
+        ],
+        "os": "linux",
         "rootfs": {
-          "type": "",
-          "diff_ids": null
+          "type": "layers",
+          "diff_ids": [
+            "sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466",
+            "sha256:2e3f404e855dfe3c4b62677e65e71995e0f4e1f3d13c9dc0aff1caa7103938cf",
+            "sha256:06da175696072203545ed4f1396114c3d0527ac6c23b121eb488ec80532d783b"
+          ]
         },
-        "config": {}
+        "config": {
+          "Cmd": [
+            "echo",
+            "`fuck`"
+          ],
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+          ],
+          "Image": "sha256:c20870a0eb6f2c07c0d38f8051270a9a06cac96c6591ff06a48f56a0f6920d01",
+          "Labels": {
+            "org.opencontainers.image.ref.name": "ubuntu",
+            "org.opencontainers.image.version": "22.04"
+          },
+          "WorkingDir": "/app",
+          "ExposedPorts": {
+            "3000/tcp": {}
+          }
+        }
       }
     },
     "Results": [
       {
-        "Target": "Dockerfile",
-        "Class": "config",
-        "Type": "dockerfile",
-        "MisconfSummary": {
-          "Successes": 22,
-          "Failures": 3,
-          "Exceptions": 0
-        },
-        "Misconfigurations": [
-          {
-            "Type": "Dockerfile Security Check",
-            "ID": "DS001",
-            "AVDID": "AVD-DS-0001",
-            "Title": "':latest' tag used",
-            "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
-            "Message": "Specify a tag in the 'FROM' statement for image 'ubuntu'",
-            "Namespace": "builtin.dockerfile.DS001",
-            "Query": "data.builtin.dockerfile.DS001.deny",
-            "Resolution": "Add a tag to the image in the 'FROM' statement",
-            "Severity": "MEDIUM",
-            "PrimaryURL": "https://avd.aquasec.com/misconfig/ds001",
-            "References": [
-              "https://avd.aquasec.com/misconfig/ds001"
-            ],
-            "Status": "FAIL",
-            "Layer": {},
-            "CauseMetadata": {
-              "Provider": "Dockerfile",
-              "Service": "general",
-              "StartLine": 3,
-              "EndLine": 3,
-              "Code": {
-                "Lines": [
-                  {
-                    "Number": 3,
-                    "Content": "FROM ubuntu:latest",
-                    "IsCause": true,
-                    "Annotation": "",
-                    "Truncated": false,
-                    "FirstCause": true,
-                    "LastCause": true
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "Type": "Dockerfile Security Check",
-            "ID": "DS002",
-            "AVDID": "AVD-DS-0002",
-            "Title": "Image user should not be 'root'",
-            "Description": "Running containers with 'root' user can lead to a container escape situation. It is a best practice to run containers as non-root users, which can be done by adding a 'USER' statement to the Dockerfile.",
-            "Message": "Specify at least 1 USER command in Dockerfile with non-root user as argument",
-            "Namespace": "builtin.dockerfile.DS002",
-            "Query": "data.builtin.dockerfile.DS002.deny",
-            "Resolution": "Add 'USER \u003cnon root user name\u003e' line to the Dockerfile",
-            "Severity": "HIGH",
-            "PrimaryURL": "https://avd.aquasec.com/misconfig/ds002",
-            "References": [
-              "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/",
-              "https://avd.aquasec.com/misconfig/ds002"
-            ],
-            "Status": "FAIL",
-            "Layer": {},
-            "CauseMetadata": {
-              "Provider": "Dockerfile",
-              "Service": "general",
-              "Code": {
-                "Lines": null
-              }
-            }
-          },
-          {
-            "Type": "Dockerfile Security Check",
-            "ID": "DS026",
-            "AVDID": "AVD-DS-0026",
-            "Title": "No HEALTHCHECK defined",
-            "Description": "You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.",
-            "Message": "Add HEALTHCHECK instruction in your Dockerfile",
-            "Namespace": "builtin.dockerfile.DS026",
-            "Query": "data.builtin.dockerfile.DS026.deny",
-            "Resolution": "Add HEALTHCHECK instruction in Dockerfile",
-            "Severity": "LOW",
-            "PrimaryURL": "https://avd.aquasec.com/misconfig/ds026",
-            "References": [
-              "https://blog.aquasec.com/docker-security-best-practices",
-              "https://avd.aquasec.com/misconfig/ds026"
-            ],
-            "Status": "FAIL",
-            "Layer": {},
-            "CauseMetadata": {
-              "Provider": "Dockerfile",
-              "Service": "general",
-              "Code": {
-                "Lines": null
-              }
-            }
-          }
-        ]
+        "Target": "docker.io/my-organization/my-app:fe99d65262e0a86aecee67732c8226a4a071e248 (ubuntu 22.04)",
+        "Class": "os-pkgs",
+        "Type": "ubuntu"
       }
     ]
   }
-  
