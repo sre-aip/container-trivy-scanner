@@ -20,11 +20,48 @@
         "Class": "config",
         "Type": "dockerfile",
         "MisconfSummary": {
-          "Successes": 23,
-          "Failures": 2,
+          "Successes": 22,
+          "Failures": 3,
           "Exceptions": 0
         },
         "Misconfigurations": [
+          {
+            "Type": "Dockerfile Security Check",
+            "ID": "DS001",
+            "AVDID": "AVD-DS-0001",
+            "Title": "':latest' tag used",
+            "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
+            "Message": "Specify a tag in the 'FROM' statement for image 'ubuntu'",
+            "Namespace": "builtin.dockerfile.DS001",
+            "Query": "data.builtin.dockerfile.DS001.deny",
+            "Resolution": "Add a tag to the image in the 'FROM' statement",
+            "Severity": "MEDIUM",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ds001",
+            "References": [
+              "https://avd.aquasec.com/misconfig/ds001"
+            ],
+            "Status": "FAIL",
+            "Layer": {},
+            "CauseMetadata": {
+              "Provider": "Dockerfile",
+              "Service": "general",
+              "StartLine": 3,
+              "EndLine": 3,
+              "Code": {
+                "Lines": [
+                  {
+                    "Number": 3,
+                    "Content": "FROM ubuntu:latest",
+                    "IsCause": true,
+                    "Annotation": "",
+                    "Truncated": false,
+                    "FirstCause": true,
+                    "LastCause": true
+                  }
+                ]
+              }
+            }
+          },
           {
             "Type": "Dockerfile Security Check",
             "ID": "DS002",
