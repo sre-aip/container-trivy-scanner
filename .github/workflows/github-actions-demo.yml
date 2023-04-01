@@ -28,3 +28,6 @@ jobs:
           # template: "@/contrib/sarif.tpl"
           output: "results.json"
           # severity: "CRITICAL"
+      - name: Cat
+        run: |
+          cat results.json
