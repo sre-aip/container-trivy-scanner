@@ -24,7 +24,7 @@ jobs:
         with:
           scan-type: "config"
           ignore-unfixed: true
-          # format: "template"
+          format: "json"
           # template: "@/contrib/sarif.tpl"
-          # output: "trivy-results.sarif"
+          output: "results.json"
           # severity: "CRITICAL"
