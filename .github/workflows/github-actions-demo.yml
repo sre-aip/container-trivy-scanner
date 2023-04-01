@@ -18,7 +18,7 @@ jobs:
           # exit-code: "1"
           ignore-unfixed: true
           # output: "results.json"
-          # vuln-type: "os,library"
+          vuln-type: "os,library"
           # severity: "CRITICAL,HIGH"
       # - name: Run Trivy vulnerability scanner in repo mode
       #   uses: aquasecurity/trivy-action@master
