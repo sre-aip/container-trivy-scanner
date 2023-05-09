@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
    
-FROM node:4.2.1
+FROM node:5.6.0
 WORKDIR /app
 COPY . .
 RUN yarn install --production
