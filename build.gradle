@@ -1,0 +1,27 @@
+plugins {
+  id "org.sonarqube"
+}
+
+group = "jp.co.sre.aip.samplebasic.trivy"
+version = "0.1.39-SNAPSHOT"
+
+// SonarCloud base project configuration
+sonarqube {
+  properties {
+    property "sonar.projectKey", "sre-aip_${project.name}"
+    property "sonar.organization", "sre-aip"
+    property "sonar.host.url", "https://sonarcloud.io/"
+    property "sonar.login", System.getenv("SONAR_TOKEN") ?: project.sonarToken
+  }
+}
+
+// SonarCloud Java project configuration
+sonarqube {
+  properties {
+    // property "sonar.projectBaseDir", rootDir.path
+    // property "sonar.sources", sonarSources
+    // property "sonar.tests", sonarTests
+    property "sonar.issuesReport.json.enable", true
+    property "sonar.externalIssuesReportPaths", "${buildDir}/reports/vulnerabilities.json"
+  }
+}

@@ -1,0 +1,34 @@
+name: build
+on: [push]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build an image from Dockerfile
+        run: |
+          docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
+      # - name: Run Trivy vulnerability scanner
+      #   uses: aquasecurity/trivy-action@master
+      #   with:
+      #     image-ref: "docker.io/my-organization/my-app:${{ github.sha }}"
+      #     format: "json"
+      #     # exit-code: "1"
+      #     ignore-unfixed: true
+      #     output: "results.json"
+      #     vuln-type: "os,library"
+      #     severity: "CRITICAL,HIGH"
+      # - name: Run Trivy vulnerability scanner in repo mode
+      #   uses: aquasecurity/trivy-action@master
+      #   with:
+      #     scan-type: "config"
+      #     ignore-unfixed: true
+      #     format: "json"
+      #     # template: "@/contrib/sarif.tpl"
+      #     output: "results.json"
+      #     # severity: "CRITICAL"
+      # - name: Cat
+      #   run: |
+      #     cat results.json
