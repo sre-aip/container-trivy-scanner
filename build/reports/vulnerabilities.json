@@ -1,0 +1,14 @@
+{
+  "issues": [
+    {
+      "engineId": "Trivy",
+      "ruleId": "CVE-2022-23491",
+      "type": "VULNERABILITY",
+      "severity": "CRITICAL",
+      "primaryLocation": {
+        "message": "Certifi is a curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. Certifi 2022.12.07 removes root certificates from \"TrustCor\" from the root store. These are in the process of being removed from Mozilla's trust store. TrustCor's root certificates are being removed pursuant to an investigation prompted by media reporting that TrustCor's ownership also operated a business that produced spyware. Conclusions of Mozilla's investigation can be found in the linked google group discussion.",
+        "filePath": "433616233360.dkr.ecr.ap-northeast-1.amazonaws.com/sample-basic-batch:latest (amazon 2 (Karoo))"
+      }
+    }
+  ]
+}
